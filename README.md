@@ -62,6 +62,6 @@ Note: tslint is now deprecated. I'd like to update these directions to include e
     };
 ```
 
-5. Remove all example .js files and add a `.feature` file inside the integration folder. The suggested way to add your step definitions is to create a like-named folder inside the integration folder and a like-named `steps.ts` file inside of that.
+5. Remove all `example.js` files and add a `.feature` file inside the integration folder. The suggested way to add your step definitions is to create a like-named folder inside the integration folder and a like-named `steps.ts` file inside of that.
 
 6. Try to run cypress tests!
