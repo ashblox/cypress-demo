@@ -11,7 +11,7 @@ Creating a new Cypress Cucumber Typescript project and documenting steps so it's
     mkdir cypress-demo
     cd cypress-demo
     npm init
-    ```
+ ```
     
 3. Run `git init` & create your first commit
 
@@ -29,7 +29,7 @@ Creating a new Cypress Cucumber Typescript project and documenting steps so it's
 ```
     "build": "tsc",
     "lint": "tslint --project tslint.json"
-    ```
+```
 Note: tslint is now deprecated. I'd like to update these directions to include eslint instead.
 
 ## Setting up Cypress
@@ -41,7 +41,7 @@ Note: tslint is now deprecated. I'd like to update these directions to include e
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true
      }
-     ```
+```
      
 3. You may also want to create a script to run cypress tests (e.g. `"e2e": "cypress open"`)
 
