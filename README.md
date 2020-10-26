@@ -17,6 +17,12 @@ Creating a new Cypress Cucumber Typescript project and documenting steps so it's
 
 4. At this point, you can rename your master branch to main if you so desire.
 
+5. Add remote and then push
+```
+    git remote add origin https://github.com/ashblox/cypress-demo.git
+    git push -u origin main
+```
+
 ## Setting up typescript and tslint
 
 1. Run `npm install --save-dev typescript tslint`
@@ -34,18 +40,29 @@ Note: tslint is now deprecated. I'd like to update these directions to include e
 
 ## Setting up Cypress
 
-1. Run `npm install --save-dev cypress cypress-cucumber-preprocessor @cypress/browserify-preprocessor resolve`
+1. Run `npm install --save-dev cypress cypress-cucumber-preprocessor @types/cypress-cucumber-preprocessor @cypress/browserify-preprocessor resolve`
 
-2. Add this entry to your `package.json`:
+3. Run `npx cypress open` to scaffold out Cypress project and fill it with examples.
+
+    _* At some point, VS Code will prompt you to add `node_modules` to the `.gitignore`. Click "Yes" when this happens._
+
+3. Add this entry to your `package.json`:
 ```
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": true
      }
 ```
-     
-3. You may also want to create a script to run cypress tests (e.g. `"e2e": "cypress open"`)
 
-4. Replace the contents of `cypress/plugins/index.js` with the following: 
+4. Add this to your `cypress.json`:
+```
+    {
+      "testFiles": "**/*.feature"
+    }
+```
+     
+5. You may also want to create a script to run cypress tests (e.g. `"e2e": "cypress open"`)
+
+6. Replace the contents of `cypress/plugins/index.js` with the following: 
 
 ```
     const browserify = require('@cypress/browserify-preprocessor');
@@ -62,6 +79,6 @@ Note: tslint is now deprecated. I'd like to update these directions to include e
     };
 ```
 
-5. Remove all `example.js` files and add a `.feature` file inside the integration folder. The suggested way to add your step definitions is to create a like-named folder inside the integration folder and a like-named `steps.ts` file inside of that.
+7. Remove all `example.js` files and add a `.feature` file inside the integration folder. The suggested way to add your step definitions is to create a like-named folder inside the integration folder and a like-named `steps.ts` file inside of that.
 
-6. Try to run cypress tests!
+8. Try to run cypress tests!
