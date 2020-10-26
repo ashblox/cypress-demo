@@ -38,7 +38,7 @@ Creating a new Cypress Cucumber Typescript project and documenting steps so it's
 ```
 Note: tslint is now deprecated. I'd like to update these directions to include eslint instead.
 
-## Setting up Cypress
+## Setting up Cypress & Cucumber
 
 1. Run `npm install --save-dev cypress cypress-cucumber-preprocessor @types/cypress-cucumber-preprocessor @cypress/browserify-preprocessor resolve`
 
